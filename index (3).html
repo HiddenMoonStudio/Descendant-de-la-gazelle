@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="سليل الريم — متجر الألبسة الشرعية حسب الطلب">
+  <title>سليل الريم | متجر الألبسة الشرعية</title>
+  <style>
+    :root {
+      /* Palette: matte black + silver, with champagne-gold and ivory accents */
+      --black: #101010;
+      --panel: #171614;
+      --silver: #d9d5d0;
+      --muted: #b5aaa0;
+      --ivory: #F3E7D8;
+      --gold: #B08A65;
+      --brown: #493326;
+      --line: rgba(243, 231, 216, .19);
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--black); }
+    body {
+      margin: 0; min-height: 100vh; padding: 26px 16px;
+      display: grid; place-items: center;
+      color: var(--ivory); background:
+        radial-gradient(ellipse at 50% 0%, rgba(176,138,101,.17), transparent 48%),
+        linear-gradient(145deg, #0b0b0b, #171512 55%, #0d0d0d);
+      font-family: "Tahoma", "Arial", sans-serif;
+    }
+    .card {
+      position: relative; width: min(100%, 440px); overflow: hidden;
+      padding: 34px 25px 25px; text-align: center;
+      background: linear-gradient(155deg, rgba(255,255,255,.045), transparent 35%), var(--panel);
+      border: 1px solid var(--line); border-radius: 26px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.48), inset 0 1px rgba(255,255,255,.04);
+      animation: rise .65s ease-out both;
+    }
+    .card::before { content: ""; position: absolute; top: 0; left: 17%; right: 17%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .ornament { width: 58px; height: 58px; margin: 0 auto 17px; display: grid; place-items: center; border: 1px solid rgba(176,138,101,.7); border-radius: 50%; color: var(--gold); font-size: 27px; background: rgba(176,138,101,.07); }
+    h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 8vw, 2.55rem); font-weight: 600; letter-spacing: .02em; color: var(--ivory); }
+    .title { margin: 12px 0 0; color: var(--gold); font-size: 1rem; font-weight: 600; }
+    .location { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; color: var(--muted); font-size: .9rem; text-decoration: none; }
+    .location svg { width: 16px; height: 16px; }
+    .rule { width: 70px; height: 1px; margin: 23px auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .intro { max-width: 320px; margin: 0 auto; color: #e0d5ca; font-size: .98rem; line-height: 1.95; }
+    .socials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; margin-top: 26px; }
+    .social {
+      min-height: 53px; display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 12px 10px; border: 1px solid rgba(217,213,208,.25); border-radius: 13px;
+      color: var(--silver); background: rgba(255,255,255,.025); text-decoration: none;
+      font-size: .94rem; transition: transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease;
+    }
+    .social svg { width: 21px; height: 21px; flex: 0 0 21px; }
+    .social:hover, .social:focus-visible { transform: translateY(-2px); border-color: var(--gold); background: rgba(176,138,101,.12); color: var(--ivory); outline: none; }
+    .social:active, .primary:active { transform: scale(.98); }
+    .primary { width: 100%; min-height: 52px; margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--gold); border-radius: 13px; background: linear-gradient(120deg, #c39b74, var(--gold)); color: #17110c; font-size: .98rem; font-weight: 700; cursor: pointer; transition: transform .18s ease, filter .18s ease; }
+    .primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .primary svg { width: 20px; height: 20px; }
+    .foot { margin: 21px 0 0; color: #8f8379; font-size: .76rem; letter-spacing: .04em; }
+    .notice { margin: 12px 0 0; color: #d5b18f; font-size: .8rem; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+    @media (max-width: 350px) { .card { padding: 28px 16px 20px; } .social { gap: 7px; font-size: .87rem; } }
+  </style>
+</head>
+<body>
+  <main class="card" aria-labelledby="person-name">
+    <!-- No portrait, avatar, or photo placeholder is used. -->
+    <div class="ornament" aria-hidden="true">✧</div>
+    <h1 id="person-name">سليل الريم</h1>
+    <p class="title">متجر الألبسة الشرعية</p>
+    <!-- Edit the location text or Google Maps query here. -->
+    <a class="location" href="https://www.google.com/maps/search/?api=1&query=Algiers%2C+Algeria" target="_blank" rel="noopener noreferrer" aria-label="افتح الموقع على خرائط Google">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      الجزائر العاصمة
+    </a>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="intro">ألبسة شرعية حسب الطلب أنيقة تجمع بين الاحتشام والجمال، لكل المناسبات.</p>
+
+    <nav class="socials" aria-label="روابط التواصل الاجتماعي">
+      <!-- Replace these URLs with the account's canonical public URLs if they change. -->
+      <a class="social" href="https://www.facebook.com/share/18Ai2EBGTr/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="صفحة فيسبوك">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14A22 22 0 0 0 14.31 3c-2.46 0-4.14 1.5-4.14 4.26V9.6H7.39v3.2h2.78V21h3.33Z"/></svg><span>Facebook</span>
+      </a>
+      <a class="social" href="https://www.instagram.com/salil_el_rime?rpxt=anNyb25qd21iaHI2" target="_blank" rel="noopener noreferrer" aria-label="حساب إنستغرام">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.7" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span>
+      </a>
+      <a class="social" href="https://www.tiktok.com/@user6154075171181" target="_blank" rel="noopener noreferrer" aria-label="حساب تيك توك">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 8.2a7.1 7.1 0 0 1-4.4-1.5v7.1a6.1 6.1 0 1 1-5.3-6.05v3.6a2.6 2.6 0 1 0 1.8 2.48V2.5h3.5c.2 2.1 1.7 3.8 4.4 4.1v1.6Z"/></svg><span>TikTok</span>
+      </a>
+      <!-- Algeria country code: +213; remove the leading 0 from 0557709967. -->
+      <a class="social" href="https://wa.me/213557709967" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z"/><path d="M8.4 7.9c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.3 0 .6.4.7 1 1.3 1.7 1.7.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.2.4.4 0 .3-.2 1-.6 1.3-.4.4-1 .6-1.6.5-.6-.1-1.4-.4-2.4-1-1.2-.7-2.1-1.8-2.6-2.5-.5-.7-.8-1.5-.8-2.1 0-.5.3-1.1.6-1.4Z"/></svg><span>WhatsApp</span>
+      </a>
+    </nav>
+    <button class="primary" id="save-contact" type="button" aria-label="حفظ جهة اتصال سليل الريم">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+      حفظ جهة الاتصال
+    </button>
+    <p class="foot">أناقة محتشمة · تفاصيل تُصنع بمحبة</p>
+  </main>
+  <script>
+    // EDITABLE CONTACT DETAILS: update these values when the business details change.
+    const contact = {
+      name: 'سليل الريم',
+      title: 'متجر الألبسة الشرعية',
+      phoneDisplay: '0557709967',
+      phoneInternational: '+213557709967',
+      location: 'Algiers, Algeria',
+      website: '' // Optional: add the published business-card URL here.
+    };
+
+    // Downloads a standards-compatible vCard (.vcf) without needing a server.
+    document.getElementById('save-contact').addEventListener('click', () => {
+      const escapeVCard = value => String(value).replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
+      const lines = [
+        'BEGIN:VCARD', 'VERSION:3.0',
+        `FN:${escapeVCard(contact.name)}`,
+        `ORG:${escapeVCard(contact.title)}`,
+        `TEL;TYPE=CELL:${contact.phoneInternational}`,
+        `ADR;TYPE=WORK:;;${escapeVCard(contact.location)};;;;`,
+        ...(contact.website ? [`URL:${contact.website}`] : []),
+        'END:VCARD'
+      ];
+      const blob = new Blob([lines.join('\r\n') + '\r\n'], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url; link.download = 'Salil-El-Rime.vcf';
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  </script>
+</body>
+</html>
